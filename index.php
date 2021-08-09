@@ -24,6 +24,7 @@
                     <h3>7. Funçoes</h3>
                     <ul>
                     <li><a href="exercicio.php?dir=funcoes&file=escopo">Função & Escopo</a></li>
+                    <li><a href="exercicio.php?dir=funcoes&file=arg_retorno">Argumentos & Retornos</a></li>
                     </ul>
             </div>
             <div class="modulo verde-escuro">
