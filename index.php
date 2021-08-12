@@ -25,6 +25,7 @@
                     <ul>
                     <li><a href="exercicio.php?dir=funcoes&file=escopo">Função & Escopo</a></li>
                     <li><a href="exercicio.php?dir=funcoes&file=arg_retorno">Argumentos & Retornos</a></li>
+                    <li><a href="exercicio.php?dir=funcoes&file=palindromo">Desafio Palindromo</a></li>
                     </ul>
             </div>
             <div class="modulo verde-escuro">
