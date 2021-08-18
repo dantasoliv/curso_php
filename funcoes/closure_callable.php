@@ -19,4 +19,4 @@ function soma2($a, $b) {
 echo soma2(2, 3) . '<br>';
 echo (is_callable(soma2) ? 'Sim' : 'Não') . '<br>';
 
-var_dump($soma1);
+var_dump($soma1); 
