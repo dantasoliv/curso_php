@@ -1,4 +1,4 @@
-<div class="titulo">Primeira Calasse</div>
+<div class="titulo">Primeira Classe</div>
 
 <?php
 class Cliente { // Comando para criar um classe
