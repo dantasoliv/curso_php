@@ -16,7 +16,7 @@ class A {
     }
 
     protected function vaiPorHeranca() { // Método Protegido - pode ser usado apneas por herança de classes dentro de um método
-        echo 'Serei transmitido por herença';
+        echo 'Serei transmitido por herança';
     }
 
     private function naoMostrar() { // Método Privado - pode ser usado anpnas dentro da própria classe
