@@ -20,7 +20,13 @@
     <main class="principal">
         <div class="conteudo">
             <nav class="modulos">
-            <div class="modulo azul-escuro">
+                <div class="modulo roxo-escuro">
+                    <h3>8. Includes</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=includes&file=include">Include</a></li>
+                    </ul>
+                </div>
+                <div class="modulo azul-escuro">
                     <h3>8. Paradigma O.O</h3>
                     <ul>
                         <li><a href="exercicio.php?dir=classes_objetos&file=classe">Primera Classe</a></li>
@@ -39,7 +45,7 @@
                         <li><a href="exercicio.php?dir=classes_objetos&file=polimorfismo">Polimorfismo</a></li>
                     </ul>
                 </div>
-            <div class="modulo vermelho-escuro">
+                <div class="modulo vermelho-escuro">
                     <h3>7. Funçoes</h3>
                     <ul>
                         <li><a href="exercicio.php?dir=funcoes&file=escopo">Função & Escopo</a></li>
@@ -55,8 +61,8 @@
                         <li><a href="exercicio.php?dir=funcoes&file=retornando_funcao">Retornando Função</a></li>
                         <li><a href="exercicio.php?dir=funcoes&file=map_filter">Map & Filter</a></li>
                     </ul>
-            </div>
-            <div class="modulo verde-escuro">
+                </div>
+                <div class="modulo verde-escuro">
                     <h3>6. laço de Repetições</h3>
                     <ul>
                         <li><a href="exercicio.php?dir=repeticoes&file=for">Laço For</a></li>
@@ -133,14 +139,6 @@
                         <li><a href="exercicio.php?dir=basico&file=css">Integração CSS</a></li>
                         <li><a href="exercicio.php?dir=basico&file=comentarios">Comentários PHP</a></li>
                         <li><a href="exercicio.php?dir=basico&file=desafio">Desafio</a></li>
-                    </ul>
-                </div>
-                <div class="modulo roxo-escuro">
-                    <h3>Módulo 09</h3>
-                    <ul>
-                        <li><a href="">Exercício A</a></li>
-                        <li><a href="">Exercício B</a></li>
-                        <li><a href="">Exercício C</a></li>
                     </ul>
                 </div>
             </nav>
