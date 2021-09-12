@@ -1,3 +1,3 @@
 <?php
 $variavelRetornada = 'Sou um retorno';
-return $variavelRetornada;
+return $variavelRetornada; // Usando return sem precisar crirar uma função
