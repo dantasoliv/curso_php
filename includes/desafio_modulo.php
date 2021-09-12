@@ -6,5 +6,5 @@ include('usuario.php'); // Incluindo o arquivo uruario.php
 // Instanciando a classe Usuario do arquico uruario.php
 $usuario = new Usuario('Daniel Dantas Oliveira', 28, 'dantasoliv'); 
 // Invocando o método apresentar da clase Usuario
-$usuario->apresentar();
+echo $usuario->apresentar();
 unset($usuario);
