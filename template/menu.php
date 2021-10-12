@@ -4,6 +4,7 @@
                     <ul>
                         <li><a href="exercicio.php?dir=tratamento_erro&file=tray_catch">Tray/Catch</a></li>
                         <li><a href="exercicio.php?dir=tratamento_erro&file=erros_personalizados">Erros Personalizados</a></li>
+                        <li><a href="exercicio.php?dir=tratamento_erro&file=desafio_intdiv_teste">Desafio Intdiv</a></li>
                     </ul>
                 </div>
                 <div class="modulo laranja-escuro">
