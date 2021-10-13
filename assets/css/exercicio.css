@@ -3,11 +3,6 @@ ul li{
     list-style: none;
 }
 
-
-.navegacao a.verde{ background-color: #4caf50;}
-    
-.navegacao a.vermelho{ background-color: #f44336;}
-
 .conteudo{
     font-size: 1.5rem;
 }

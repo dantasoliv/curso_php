@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if($_COOKIE['usuario']) {
+    $_SESSION['usuario'] = $_COOKIE['usuario'];
+}
+
 if(!$_SESSION['usuario']) { // criando uma condição para verificar se o uruario está logado
     header('Location: login.php'); 
 }
@@ -16,7 +21,8 @@ if(!$_SESSION['usuario']) { // criando uma condição para verificar se o uruari
         <h2>Índice dos Exercícios</h2>
     </header>
     <nav class="navegacao">
-        
+        <span class="usuario">Usuario: <?= $_SESSION['usuario'] ?></span>
+        <a href="logout.php" class="vermelho">Sair</a>
     </nav>
     <main class="principal">
         <div class="conteudo">

@@ -156,3 +156,16 @@ hr{
     padding: 5px 10px;
     margin-right: 10px;
 }
+
+.navegacao a.verde{ background-color: #4caf50;}
+    
+.navegacao a.vermelho{ background-color: #f44336;}
+
+span.usuario {
+    flex-grow: 1;
+    justify-self: flex-start;
+    color: #eee;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}

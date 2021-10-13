@@ -3,7 +3,7 @@
 <?php
 //session_id('eb8qdd6tebferqmv8ipi1o2d0s'); // função para acessar o id de uma sessão
 session_start(); // inicoando uma sessão
-echo session_id(); // exibindo o id da sessão (coockie)
+echo session_id(); // exibindo o id da sessão
 
 $contador = &$_SESSION['contador']; // criando um contador para a sessão
 $contador = $contador ? $contador + 1 : 1;
