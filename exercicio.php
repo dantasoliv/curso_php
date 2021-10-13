@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!$_SESSION['usuario']) { // criando uma condição para verificar se o uruario está logado
+    header('Location: login.php'); 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
