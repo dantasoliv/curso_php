@@ -31,7 +31,7 @@ if (count($_POST) > 0) { // Verificando se o formulario está preenchido
         echo 'Quantidade de filhos inválida', '<br>';
     }
 
-    $salarioConfig = ["options" => ['decimal' => ',']];
+    $salarioConfig = ["options" => ['decimal' => ',']]; // Verificando se o salário tem separação de casa decimal com virgula
     if(!filter_var($_POST['salario'], FILTER_VALIDATE_FLOAT, $salarioConfig)) {
         echo 'Salário inválido', '<br>';
     }
