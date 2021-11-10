@@ -1,5 +1,3 @@
-<div class="titulo">PDO: Conexão</div>
-
 <?php
 
 function novaConexao($banco = 'curso_php') {
@@ -15,5 +13,5 @@ function novaConexao($banco = 'curso_php') {
     }
 }
 
-novaConexao();
-echo "Sucesso!";
+//novaConexao();
+//echo "Sucesso!";

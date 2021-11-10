@@ -11,6 +11,7 @@
                         <li><a href="exercicio.php?dir=db&file=inserir_2">Inserir Registro #02</a></li>
                         <li><a href="exercicio.php?dir=db&file=alterar">Alterar Registro</a></li>
                         <li><a href="exercicio.php?dir=db&file=conexao_pdo">PDO: Conexão</a></li>
+                        <li><a href="exercicio.php?dir=db&file=inserir_pdo">PDO: Inserir</a></li>
                     </ul>
                 </div>
                 <div class="modulo roxo">
