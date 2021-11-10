@@ -1,10 +1,35 @@
 <!--Link Bootstrap-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<div class="titulo">Inserir Registro #02</div>
+<div class="titulo">Alterar Registro</div>
 
-<h2>Cadastro</h2>
+<h2>Atualizar</h2>
 
 <?php
+
+require_once "conexao.php"; // importanto o arquivo de conexão com o banco de dados
+$conexao = novaConexao(); // Criando coneção com o banco de dados
+
+// fazendo um select no banco de dados e preenchendo o formulário com o resultado do select
+if($_GET['codigo']) {
+    $sql = "SELECT * FROM cadastro WHERE id = ?";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("i", $_GET['codigo']);
+
+    if($stmt->execute()) {
+        $resultado = $stmt->get_result();
+        if($resultado->num_rows > 0) {
+            $dados = $resultado->fetch_assoc();
+            if($dados['nascimento']) {
+                $dt = new DateTime($dados['nascimento']);
+                $dados['nascimento'] = $dt->format('d/m/Y');
+            }
+            if($dados['salario']) {
+                $dados['salario'] = str_replace(".", ",", $dados['salario']); // função para substituir . por ,
+            }
+        }
+    }
+}
+
 if (count($_POST) > 0) { // Verificando se o formulario está preenchido
     // if(isset($_POST['nome'])) - Outra forma de verificar se o campo está prenchido
 
@@ -42,15 +67,12 @@ if (count($_POST) > 0) { // Verificando se o formulario está preenchido
 
     if(!count($erros)) { // Verificando se existe erros no formulário
         // Conexão com banco de dados para inserir as indormações do formulário no banco de dados
-        require_once "conexao.php"; // importanto o arquivo de conexão com o banco de dados
-
-        // Inserindo dados do formuário no banco de dados
+        // Atualizando dados do formuário no banco de dados
         // Evitando ataques de SQL injection
-        $sql = "INSERT INTO cadastro
-        (nome, nascimento, email, site, filhos, salario)
-        VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "UPDATE cadastro
+        SET nome = ?, nascimento = ?, email = ?, site = ?, filhos = ?, salario = ?
+        WHERE ID = ?";
 
-        $conexao = novaConexao();
         $stmt = $conexao->prepare($sql);
 
         $params = [
@@ -60,9 +82,10 @@ if (count($_POST) > 0) { // Verificando se o formulario está preenchido
             $dados['site'],
             $dados['filhos'],
             $dados['salario'] ? str_replace(",", ".", $dados['salario']) : null,
+            $dados['id'],
         ];
 
-        $stmt->bind_param("ssssid", ...$params);
+        $stmt->bind_param("ssssidi", ...$params);
 
         if($stmt->execute()) { // executando a insersão das informações do formulário no banco de dados e em seguida limpando o formulário
             unset($dados);
@@ -84,7 +107,21 @@ if (count($_POST) > 0) { // Verificando se o formulario está preenchido
     <!-- </div> -->
 <?php endforeach ?>
 
+<form action="/exercicio.php" method="get">
+    <input type="hidden" name="dir" value="db">
+    <input type="hidden" name="file" value="alterar">
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="number" name="codigo" value="<?= $_GET['codigo'] ?>" placeholder="Informe o código para consulta" class="form-control">
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success mb-4">Consultar</button>
+        </div>
+    </div>
+</form>
+
 <form action="#" method="post">
+    <input type="hidden" name="id" value="<?= $dados['id'] ?>">
     <div class="form-row">
         <div class="form-group col-md-9">
             <label for="nome">Nome</label>

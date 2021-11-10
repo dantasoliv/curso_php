@@ -9,6 +9,7 @@
                         <li><a href="exercicio.php?dir=db&file=excluir_1">Excluir Registros #01</a></li>
                         <li><a href="exercicio.php?dir=db&file=excluir_2">Excluir Registros #02</a></li>
                         <li><a href="exercicio.php?dir=db&file=inserir_2">Inserir Registro #02</a></li>
+                        <li><a href="exercicio.php?dir=db&file=alterar">Alterar Registro</a></li>
                     </ul>
                 </div>
                 <div class="modulo roxo">
