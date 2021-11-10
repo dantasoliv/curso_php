@@ -26,3 +26,5 @@ if($conexao->exec($sql)) { // Verificando se  o código sql foi executado ou nã
     echo $conexao->errorCode() . "<br>";
     print_r($conexao->errorInfo());
 }
+
+$conexao->close(); // encerrando conexão com o banco de dados
